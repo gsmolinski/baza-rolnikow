@@ -3,4 +3,4 @@ Application written in R for store, search and modify data in data base stored a
 Application was written as the place where user can store information about respondents who participated in the CATI surveys. Name "Baza rolników" is because the intention was to store only information about farmers who participated in the CATI surveys, but it could be used for any respondents.  
 Application is quite complex (1600 lines of code) and is no finished, because needs more tests.  
 The best place to start is to read the Instruction - file "Instrukcja_baza_rolnikow.pdf" in the "Instrukcja" folder. Instruction is in Polish as well.  
-Application can be seen using this link: XXXXXXXXXXXXXXXXXXXXXXX. Application is hosting on the shinyapps.io using free plan, so it will be much slower than in reality, because only 1GB of RAM and one thread of processor is available.
+Application can be seen using this link: https://gsmolinski.shinyapps.io/Baza_rolnikow/.  Application is hosting on the shinyapps.io using free plan, so it will be much slower than in reality, because only 1GB of RAM and one thread of processor is available.
