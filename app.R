@@ -1089,7 +1089,6 @@ server <- function(input, output, session) {
                                                       baza_rolnikow_telefony_id_duble <- unique(baza_rolnikow_telefony_id_duble, by = "zdublowane_id")
                                                       baza_rolnikow_telefony_id_duble <- baza_rolnikow_telefony_id_duble[, zdublowane_id := fifelse(stri_detect_fixed(zdublowane_id, ","), zdublowane_id, NA_character_)][!is.na(zdublowane_id)]
                                                       baza_rolnikow_telefony_id_duble <- baza_rolnikow_telefony_id_duble[, .(zdublowane_id = unlist(lapply(zdublowane_id, zredukuj_liste_zdublowanych_id, zdublowane_id_wszystkie = zdublowane_id), use.names = FALSE))]
-                                                      baza_rolnikow_telefony_id_duble <- baza_rolnikow_telefony_id_duble[, .(zdublowane_id = unlist(lapply(zdublowane_id, zredukuj_liste_zdublowanych_id, zdublowane_id_wszystkie = zdublowane_id), use.names = FALSE))]
                                                       baza_rolnikow_telefony_id_duble <- unique(baza_rolnikow_telefony_id_duble, by = "zdublowane_id")
                                                       same_id <- unique(unlist(map(baza_rolnikow_telefony_id_duble$zdublowane_id, ~ as.integer(unlist(stri_split_fixed(., ", "), use.names = FALSE)))))
                                                       liczba_kolumn_z_telefonami <- length(names(baza_rolnikow)[stri_detect_regex(names(baza_rolnikow), "^telefon_[1-9]+$")])
